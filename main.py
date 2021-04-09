@@ -1,9 +1,20 @@
+# Copyright (c) 2021 Garvit Joshi <garvitjoshi9@gmail.com>
+
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+
 from os import system, path
 from time import sleep, ctime
-from sys import argv
+import sys
 
-
-if __name__ == "__main__":
+def main(argv) -> int:
     args_len = len(argv)
     if args_len == 1:
         print("Please give a file name to watch")
@@ -28,3 +39,7 @@ if __name__ == "__main__":
         last_timer = timer
         timer = ctime(path.getmtime(argv[1]))
         sleep(1)
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))

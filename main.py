@@ -22,7 +22,8 @@ def main(argv) -> int:
     elif args_len == 2:
         command = "g++ " + argv[1]
     else:
-        command = "g++ " + (" ".join(argv[1:]))
+        command = "g++ " + (" ".join(argv[2:]))
+    print("Command used for compiling:",command)
     try:
         timer = ctime(path.getmtime(argv[1]))
     except FileNotFoundError:

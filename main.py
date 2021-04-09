@@ -18,7 +18,7 @@ def main(argv) -> int:
     args_len = len(argv)
     if args_len == 1:
         print("Please give a file name to watch")
-        exit()
+        sys.exit()
     elif args_len == 2:
         command = "g++ " + argv[1]
     else:
@@ -28,7 +28,7 @@ def main(argv) -> int:
         timer = ctime(path.getmtime(argv[1]))
     except FileNotFoundError:
         print("File:", argv[1],"Not Found" )
-        exit()
+        sys.exit()
     last_timer = 0
     while True:
         if last_timer == 0:

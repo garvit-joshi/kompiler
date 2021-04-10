@@ -14,6 +14,7 @@ from os import system, path
 from time import sleep, ctime
 import sys
 
+
 def main(argv) -> int:
     args_len = len(argv)
     if args_len == 1:
@@ -23,13 +24,14 @@ def main(argv) -> int:
         command = "g++ " + argv[1]
     else:
         command = "g++ " + (" ".join(argv[2:]))
-    print("Command used for compiling:",command)
+    print("Command used for compiling:", command)
     try:
         timer = ctime(path.getmtime(argv[1]))
     except FileNotFoundError:
-        print("File:", argv[1],"Not Found" )
+        print("File:", argv[1], "Not Found")
         sys.exit()
     last_timer = 0
+    system(command)
     while True:
         if last_timer == 0:
             last_timer = timer
@@ -40,7 +42,3 @@ def main(argv) -> int:
         last_timer = timer
         timer = ctime(path.getmtime(argv[1]))
         sleep(1)
-
-
-if __name__ == "__main__":
-    sys.exit(main(sys.argv))

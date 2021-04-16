@@ -9,8 +9,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from loader import main
+from auto_compiler.loader import main
 import sys
 
-if __name__ == "__main__":
+def run_loader():
     sys.exit(main(sys.argv))

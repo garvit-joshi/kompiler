@@ -5,13 +5,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="kompiler",
-    version="v0.1.5",
+    version="v0.1.6",
     author="Garvit Joshi",
     author_email="garvitjoshi9@gmail.com",
     description="A package for auto compiling C++ files as soon as they are saved.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/garvit-joshi/auto-loader",
+    url="https://github.com/garvit-joshi/kompiler",
     packages=["kompiler"],
     keywords = "C++ Compiling g++",
     classifiers=[

@@ -10,12 +10,12 @@
 # SOFTWARE.
 
 
+import sys
 from os import system, path
 from time import sleep, ctime
-import sys
 
-
-def main(argv) -> int:
+def main():
+    argv = sys.argv
     args_len = len(argv)
     if args_len == 1:
         print("Please give a file name to watch")
@@ -42,3 +42,7 @@ def main(argv) -> int:
         last_timer = timer
         timer = ctime(path.getmtime(argv[1]))
         sleep(1)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

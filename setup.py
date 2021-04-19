@@ -13,7 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/garvit-joshi/kompiler",
     packages=["kompiler"],
-    keywords = "C++ Compiling g++",
+    keywords="C++ Compiling g++",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

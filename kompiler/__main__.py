@@ -14,6 +14,7 @@ import sys
 from os import system, path
 from time import sleep, ctime
 
+
 def main():
     argv = sys.argv
     args_len = len(argv)

@@ -11,8 +11,12 @@
 
 
 import sys
-from os import system, path
+from os import system, path, name
 from time import sleep, ctime
+
+
+def clear_screen():
+    system('cls' if name=='nt' else 'clear')
 
 
 def main():
@@ -38,7 +42,7 @@ def main():
             last_timer = timer
             timer = ctime(path.getmtime(argv[1]))
         if timer != last_timer:
-            system("clear")
+            clear_screen()
             system(command)
         last_timer = timer
         timer = ctime(path.getmtime(argv[1]))

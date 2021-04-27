@@ -16,7 +16,7 @@ from time import sleep, ctime
 
 
 def clear_screen():
-    system('cls' if name=='nt' else 'clear')
+    system('cls' if name == 'nt' else 'clear')
 
 
 def main():

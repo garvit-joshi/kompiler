@@ -11,7 +11,6 @@ __pycache__/
 *.cpp
 *.exe
 *.out
-*.txt
 build/
 develop-eggs/
 dist/

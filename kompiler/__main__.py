@@ -13,10 +13,23 @@
 import sys
 from os import system, path, name
 from time import sleep, ctime
+import kompiler.constants as C
 
 
 def clear_screen():
     system('cls' if name == 'nt' else 'clear')
+
+
+def version():
+    print(C.VERSION)
+
+
+def about():
+    print(C.ABOUT)
+
+
+def help():
+    print(C.HELP)
 
 
 def main():
@@ -24,8 +37,18 @@ def main():
     args_len = len(argv)
     if args_len == 1:
         print("Please give a file name to watch")
+        help()
         sys.exit()
     elif args_len == 2:
+        if argv[1] in ("--version", "-v"):
+            version()
+            sys.exit()
+        elif argv[1] in ("--help", "-h"):
+            help()
+            sys.exit()
+        elif argv[1] in ("--about", "-a"):
+            about()
+            sys.exit()
         command = "g++ " + argv[1]
     else:
         command = "g++ " + (" ".join(argv[2:]))

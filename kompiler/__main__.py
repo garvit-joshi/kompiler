@@ -61,15 +61,19 @@ def main():
     last_timer = 0
     system(command)
     while True:
-        if last_timer == 0:
+        try:
+            if last_timer == 0:
+                last_timer = timer
+                timer = ctime(path.getmtime(argv[1]))
+            if timer != last_timer:
+                clear_screen()
+                system(command)
             last_timer = timer
             timer = ctime(path.getmtime(argv[1]))
-        if timer != last_timer:
-            clear_screen()
-            system(command)
-        last_timer = timer
-        timer = ctime(path.getmtime(argv[1]))
-        sleep(1)
+            sleep(1)
+        except KeyboardInterrupt:
+            print("\nExiting...")
+            break
 
 
 if __name__ == "__main__":

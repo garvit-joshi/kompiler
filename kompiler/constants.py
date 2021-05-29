@@ -1,4 +1,4 @@
-VERSION_NO = "0.4.0"
+VERSION_NO = "0.5.0"
 
 VERSION = "Kompiler: v"+VERSION_NO
 

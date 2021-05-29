@@ -67,6 +67,7 @@ def main():
                 timer = ctime(path.getmtime(argv[1]))
             if timer != last_timer:
                 clear_screen()
+                print(f"\nSuccess!! Last Compiled at: {timer} \n")
                 system(command)
             last_timer = timer
             timer = ctime(path.getmtime(argv[1]))

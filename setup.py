@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="kompiler",
-    version="0.4.0",
+    version="0.5.0",
     author="Garvit Joshi",
     author_email="garvitjoshi9@gmail.com",
     description="A package for auto compiling C++ files as soon as they are saved.",

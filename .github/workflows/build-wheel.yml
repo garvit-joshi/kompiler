@@ -9,7 +9,7 @@ jobs:
       matrix:
         python-version: [3.5, 3.6, 3.7, 3.8, 3.9]
         architecture: ['x86', 'x64']
-    name: "Python ${{ matrix.python-version }} on ${{ matrix.architecture }}"
+    name: "Python ${{ matrix.python-version }} on Windows ${{ matrix.architecture }}"
     steps:
       - uses: actions/checkout@v2
       - name: Setup Python
@@ -34,7 +34,7 @@ jobs:
       matrix:
         python-version: [3.5, 3.6, 3.7, 3.8, 3.9]
         architecture: ['x64']
-    name: "Python ${{ matrix.python-version }} on ${{ matrix.architecture }}"
+    name: "Python ${{ matrix.python-version }} on Linux ${{ matrix.architecture }}"
     steps:
       - uses: actions/checkout@v2
       - name: Setup Python

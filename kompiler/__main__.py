@@ -67,11 +67,11 @@ def main():
                 timer = ctime(path.getmtime(argv[1]))
             if timer != last_timer:
                 clear_screen()
-                print(f"\nSuccess!! Last Compiled at: {timer} \n")
                 system(command)
+                print(f"\n\nSuccess!! Last Compiled at: {timer} \n")
             last_timer = timer
             timer = ctime(path.getmtime(argv[1]))
-            sleep(1)
+            sleep(0.5)
         except KeyboardInterrupt:
             print("\nExiting...")
             break

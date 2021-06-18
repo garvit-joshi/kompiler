@@ -22,7 +22,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -U setuptools wheel build
       - name: Build Wheel
-        run: python setup.py bdist_wheel --dist-dir wheelhouse
+        run: python setup.py bdist_wheel --dist-dir wheelhouse/wheel-${{ matrix.python-version }}-${{ matrix.architecture }}
       - uses: actions/upload-artifact@v2
         with:
           name: "wheelhouse-win"
@@ -47,7 +47,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -U setuptools wheel build
       - name: Build Wheel
-        run: python setup.py bdist_wheel --dist-dir wheelhouse
+        run: python setup.py bdist_wheel --dist-dir wheelhouse/wheel-${{ matrix.python-version }}-${{ matrix.architecture }}
       - uses: actions/upload-artifact@v2
         with:
           name: "wheelhouse-lin"

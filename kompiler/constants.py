@@ -10,7 +10,7 @@
 # SOFTWARE.
 
 
-VERSION_NO = "1.2.0"
+VERSION_NO = "1.2.1"
 
 VERSION = "Kompiler: v"+VERSION_NO
 
